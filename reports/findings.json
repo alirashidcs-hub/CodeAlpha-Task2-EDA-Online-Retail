@@ -1,0 +1,531 @@
+{
+  "structure": {
+    "shape": [
+      541909,
+      8
+    ],
+    "columns": [
+      "InvoiceNo",
+      "StockCode",
+      "Description",
+      "Quantity",
+      "InvoiceDate",
+      "UnitPrice",
+      "CustomerID",
+      "Country"
+    ],
+    "dtypes": {
+      "InvoiceNo": "object",
+      "StockCode": "object",
+      "Description": "object",
+      "Quantity": "int64",
+      "InvoiceDate": "datetime64[us]",
+      "UnitPrice": "float64",
+      "CustomerID": "float64",
+      "Country": "str"
+    },
+    "unique_counts": {
+      "InvoiceNo": 25900,
+      "StockCode": 4070,
+      "Description": 4223,
+      "Quantity": 722,
+      "InvoiceDate": 23260,
+      "UnitPrice": 1630,
+      "CustomerID": 4372,
+      "Country": 38
+    },
+    "n_countries": 38,
+    "date_min": "2010-12-01 08:26:00",
+    "date_max": "2011-12-09 12:50:00"
+  },
+  "missing_values": [
+    {
+      "column": "CustomerID",
+      "missing_count": 135080,
+      "missing_pct": 24.93
+    },
+    {
+      "column": "Description",
+      "missing_count": 1454,
+      "missing_pct": 0.27
+    }
+  ],
+  "duplicates": {
+    "count": 5268,
+    "pct": 0.97
+  },
+  "data_quality_checks": {
+    "cancellation_invoices": 9288,
+    "cancellation_pct": 1.71,
+    "negative_quantity_rows": 10624,
+    "zero_or_negative_price_rows": 2517,
+    "negative_qty_non_cancellation_rows": 1336
+  },
+  "cleaning_summary": {
+    "rows_before": 541909,
+    "rows_after_dedup": 536641,
+    "duplicate_rows_removed": 5268,
+    "rows_flagged_cancelled": 9251,
+    "rows_missing_customer_id": 135037,
+    "rows_valid_sales": 524878
+  },
+  "univariate": {
+    "quantity_describe": {
+      "count": 524878.0,
+      "mean": 10.616600429052085,
+      "std": 156.2800307234939,
+      "min": 1.0,
+      "25%": 1.0,
+      "50%": 4.0,
+      "75%": 11.0,
+      "max": 80995.0
+    },
+    "unitprice_describe": {
+      "count": 524878.0,
+      "mean": 3.9225725673394582,
+      "std": 36.09302753192425,
+      "min": 0.001,
+      "25%": 1.25,
+      "50%": 2.08,
+      "75%": 4.13,
+      "max": 13541.33
+    },
+    "revenue_describe": {
+      "count": 524878.0,
+      "mean": 20.275398862211794,
+      "std": 271.69356629922254,
+      "min": 0.001,
+      "25%": 3.9,
+      "50%": 9.92,
+      "75%": 17.700000000000003,
+      "max": 168469.6
+    },
+    "quantity_skew": 469.54178476684876,
+    "unitprice_skew": 205.0851679980492
+  },
+  "top_countries_by_transactions": {
+    "United Kingdom": 479985,
+    "Germany": 9025,
+    "France": 8392,
+    "EIRE": 7879,
+    "Spain": 2479,
+    "Netherlands": 2359,
+    "Belgium": 2031,
+    "Switzerland": 1958,
+    "Portugal": 1492,
+    "Australia": 1181
+  },
+  "revenue_by_country_top10": {
+    "United Kingdom": 9001744.09,
+    "Netherlands": 285446.34,
+    "EIRE": 283140.52,
+    "Germany": 228678.4,
+    "France": 209625.37,
+    "Australia": 138453.81,
+    "Spain": 61558.56,
+    "Switzerland": 57067.6,
+    "Belgium": 41196.34,
+    "Sweden": 38367.83
+  },
+  "uk_revenue_share_pct": 84.59,
+  "top_products_by_revenue": {
+    "DOTCOM POSTAGE": 206248.77,
+    "REGENCY CAKESTAND 3 TIER": 174156.54,
+    "PAPER CRAFT , LITTLE BIRDIE": 168469.6,
+    "WHITE HANGING HEART T-LIGHT HOLDER": 106236.72,
+    "PARTY BUNTING": 99445.23,
+    "JUMBO BAG RED RETROSPOT": 94159.81,
+    "MEDIUM CERAMIC TOP STORAGE JAR": 81700.92,
+    "POSTAGE": 78101.88,
+    "Manual": 77752.82,
+    "RABBIT NIGHT LIGHT": 66870.03
+  },
+  "top_products_by_quantity": {
+    "PAPER CRAFT , LITTLE BIRDIE": 80995,
+    "MEDIUM CERAMIC TOP STORAGE JAR": 78033,
+    "WORLD WAR 2 GLIDERS ASSTD DESIGNS": 54951,
+    "JUMBO BAG RED RETROSPOT": 48371,
+    "WHITE HANGING HEART T-LIGHT HOLDER": 37872,
+    "POPCORN HOLDER": 36749,
+    "PACK OF 72 RETROSPOT CAKE CASES": 36396,
+    "ASSORTED COLOUR BIRD ORNAMENT": 36362,
+    "RABBIT NIGHT LIGHT": 30739,
+    "MINI PAINT SET VINTAGE ": 26633
+  },
+  "top10_product_overlap_rev_qty": 5,
+  "monthly_revenue": {
+    "2010-12": 821452.73,
+    "2011-01": 689811.61,
+    "2011-02": 522545.56,
+    "2011-03": 716215.26,
+    "2011-04": 536968.49,
+    "2011-05": 769296.61,
+    "2011-06": 760547.01,
+    "2011-07": 718076.12,
+    "2011-08": 757841.38,
+    "2011-09": 1056435.19,
+    "2011-10": 1151263.73,
+    "2011-11": 1503866.78,
+    "2011-12": 637790.33
+  },
+  "revenue_by_day_of_week": {
+    "Monday": 1775782.07,
+    "Tuesday": 2175700.51,
+    "Wednesday": 1847074.38,
+    "Thursday": 2199292.57,
+    "Friday": 1837470.49,
+    "Sunday": 806790.78
+  },
+  "revenue_by_hour": {
+    "6": 4.25,
+    "7": 31059.21,
+    "8": 283750.68,
+    "9": 990054.99,
+    "10": 1444814.77,
+    "11": 1236573.29,
+    "12": 1439324.66,
+    "13": 1261195.2,
+    "14": 1177907.52,
+    "15": 1350333.31,
+    "16": 752487.96,
+    "17": 460963.92,
+    "18": 144603.61,
+    "19": 50204.95,
+    "20": 18832.48
+  },
+  "peak_revenue_month": "2011-11",
+  "peak_revenue_month_value": 1503866.78,
+  "correlation_matrix": {
+    "Quantity": {
+      "Quantity": 1.0,
+      "UnitPrice": -0.004,
+      "Revenue": 0.907
+    },
+    "UnitPrice": {
+      "Quantity": -0.004,
+      "UnitPrice": 1.0,
+      "Revenue": 0.137
+    },
+    "Revenue": {
+      "Quantity": 0.907,
+      "UnitPrice": 0.137,
+      "Revenue": 1.0
+    }
+  },
+  "quantity_price_pearson": {
+    "r": -0.0038,
+    "p_value": 0.0060574654112285995
+  },
+  "country_month_pivot_top8": {
+    "2010-12": {
+      "United Kingdom": 746082.22,
+      "Netherlands": 8784.48,
+      "EIRE": 10033.26,
+      "Germany": 15205.74,
+      "France": 9616.31,
+      "Australia": 965.35,
+      "Spain": 1843.73,
+      "Switzerland": 1304.92
+    },
+    "2011-01": {
+      "United Kingdom": 559975.83,
+      "Netherlands": 26611.16,
+      "EIRE": 21904.19,
+      "Germany": 16880.84,
+      "France": 17740.12,
+      "Australia": 9017.71,
+      "Spain": 10086.09,
+      "Switzerland": 4231.23
+    },
+    "2011-02": {
+      "United Kingdom": 428986.62,
+      "Netherlands": 23011.91,
+      "EIRE": 12203.74,
+      "Germany": 9581.05,
+      "France": 8515.96,
+      "Australia": 14695.42,
+      "Spain": 2114.5,
+      "Switzerland": 2654.92
+    },
+    "2011-03": {
+      "United Kingdom": 584810.78,
+      "Netherlands": 22416.49,
+      "EIRE": 22197.51,
+      "Germany": 14392.69,
+      "France": 14584.95,
+      "Australia": 17223.99,
+      "Spain": 5363.15,
+      "Switzerland": 1870.23
+    },
+    "2011-04": {
+      "United Kingdom": 475677.63,
+      "Netherlands": 2976.56,
+      "EIRE": 7570.5,
+      "Germany": 12315.54,
+      "France": 5529.61,
+      "Australia": 771.6,
+      "Spain": 1785.65,
+      "Switzerland": 2076.94
+    },
+    "2011-05": {
+      "United Kingdom": 638104.89,
+      "Netherlands": 29185.88,
+      "EIRE": 18003.72,
+      "Germany": 25734.7,
+      "France": 17606.48,
+      "Australia": 13638.41,
+      "Spain": 3257.6,
+      "Switzerland": 3610.01
+    },
+    "2011-06": {
+      "United Kingdom": 618345.53,
+      "Netherlands": 26858.09,
+      "EIRE": 24863.61,
+      "Germany": 13246.35,
+      "France": 16348.41,
+      "Australia": 25187.77,
+      "Spain": 3333.21,
+      "Switzerland": 7904.15
+    },
+    "2011-07": {
+      "United Kingdom": 600919.07,
+      "Netherlands": 26.02,
+      "EIRE": 42738.85,
+      "Germany": 16440.98,
+      "France": 10000.19,
+      "Australia": 4964.38,
+      "Spain": 7620.77,
+      "Switzerland": 3990.76
+    },
+    "2011-08": {
+      "United Kingdom": 606784.93,
+      "Netherlands": 40327.81,
+      "EIRE": 18344.2,
+      "Germany": 19220.77,
+      "France": 13810.96,
+      "Australia": 22489.2,
+      "Spain": 3342.41,
+      "Switzerland": 4969.89
+    },
+    "2011-09": {
+      "United Kingdom": 895098.64,
+      "Netherlands": 26937.26,
+      "EIRE": 42923.7,
+      "Germany": 18079.47,
+      "France": 23428.04,
+      "Australia": 5106.73,
+      "Spain": 5189.24,
+      "Switzerland": 8284.86
+    },
+    "2011-10": {
+      "United Kingdom": 935404.14,
+      "Netherlands": 40708.65,
+      "EIRE": 24302.92,
+      "Germany": 31628.42,
+      "France": 33471.05,
+      "Australia": 17150.53,
+      "Spain": 8636.94,
+      "Switzerland": 8050.73
+    },
+    "2011-11": {
+      "United Kingdom": 1319934.07,
+      "Netherlands": 25874.01,
+      "EIRE": 30713.43,
+      "Germany": 27967.68,
+      "France": 31696.37,
+      "Australia": 7242.72,
+      "Spain": 8669.06,
+      "Switzerland": 8118.96
+    },
+    "2011-12": {
+      "United Kingdom": 591619.74,
+      "Netherlands": 11728.02,
+      "EIRE": 7340.89,
+      "Germany": 7984.17,
+      "France": 7276.92,
+      "Australia": 0.0,
+      "Spain": 316.21,
+      "Switzerland": 0.0
+    }
+  },
+  "anomaly_detection": {
+    "quantity_outlier_threshold": 41.0,
+    "quantity_outlier_count": 19323,
+    "quantity_outlier_pct": 3.681,
+    "max_quantity_observed": 80995,
+    "unitprice_outlier_threshold": 12.77,
+    "unitprice_outlier_count": 12187,
+    "unitprice_outlier_pct": 2.322,
+    "max_unitprice_observed": 13541.33
+  },
+  "cancellation_rate_by_month_pct": {
+    "2010-12": 1.71,
+    "2011-01": 2.01,
+    "2011-02": 1.71,
+    "2011-03": 1.91,
+    "2011-04": 1.88,
+    "2011-05": 1.69,
+    "2011-06": 1.94,
+    "2011-07": 1.74,
+    "2011-08": 1.9,
+    "2011-09": 1.61,
+    "2011-10": 1.99,
+    "2011-11": 1.29,
+    "2011-12": 1.42
+  },
+  "rfm_summary": {
+    "n_customers": 4338,
+    "recency_describe": {
+      "count": 4338.0,
+      "mean": 92.54,
+      "std": 100.01,
+      "min": 1.0,
+      "25%": 18.0,
+      "50%": 51.0,
+      "75%": 142.0,
+      "max": 374.0
+    },
+    "frequency_describe": {
+      "count": 4338.0,
+      "mean": 4.27,
+      "std": 7.7,
+      "min": 1.0,
+      "25%": 1.0,
+      "50%": 2.0,
+      "75%": 5.0,
+      "max": 209.0
+    },
+    "monetary_describe": {
+      "count": 4338.0,
+      "mean": 2048.69,
+      "std": 8985.23,
+      "min": 3.75,
+      "25%": 306.48,
+      "50%": 668.57,
+      "75%": 1660.6,
+      "max": 280206.02
+    }
+  },
+  "top10_customers_by_monetary": [
+    {
+      "CustomerID": 14646,
+      "Recency": 2,
+      "Frequency": 73,
+      "Monetary": 280206.02
+    },
+    {
+      "CustomerID": 18102,
+      "Recency": 1,
+      "Frequency": 60,
+      "Monetary": 259657.3
+    },
+    {
+      "CustomerID": 17450,
+      "Recency": 8,
+      "Frequency": 46,
+      "Monetary": 194390.79
+    },
+    {
+      "CustomerID": 16446,
+      "Recency": 1,
+      "Frequency": 2,
+      "Monetary": 168472.5
+    },
+    {
+      "CustomerID": 14911,
+      "Recency": 1,
+      "Frequency": 201,
+      "Monetary": 143711.17
+    },
+    {
+      "CustomerID": 12415,
+      "Recency": 24,
+      "Frequency": 21,
+      "Monetary": 124914.53
+    },
+    {
+      "CustomerID": 14156,
+      "Recency": 10,
+      "Frequency": 55,
+      "Monetary": 117210.08
+    },
+    {
+      "CustomerID": 17511,
+      "Recency": 3,
+      "Frequency": 31,
+      "Monetary": 91062.38
+    },
+    {
+      "CustomerID": 16029,
+      "Recency": 39,
+      "Frequency": 63,
+      "Monetary": 80850.84
+    },
+    {
+      "CustomerID": 12346,
+      "Recency": 326,
+      "Frequency": 1,
+      "Monetary": 77183.6
+    }
+  ],
+  "statistical_tests": {
+    "ttest_uk_vs_nonuk_revenue": {
+      "hypothesis": "H0: mean revenue per line item is equal for UK vs non-UK transactions",
+      "uk_mean": 18.754,
+      "non_uk_mean": 36.539,
+      "t_statistic": -30.4614,
+      "p_value": 3.2953391701185967e-203,
+      "significant_at_0.05": true
+    },
+    "anova_quarterly_invoice_revenue": {
+      "hypothesis": "H0: mean invoice revenue is equal across quarters",
+      "f_statistic": 2.9459,
+      "p_value": 0.0190593130664451,
+      "significant_at_0.05": true,
+      "quarterly_means": {
+        "2010Q4": 526.91,
+        "2011Q1": 529.83,
+        "2011Q2": 463.41,
+        "2011Q3": 541.91,
+        "2011Q4": 585.1
+      }
+    },
+    "chisquare_country_vs_cancellation": {
+      "hypothesis": "H0: cancellation status is independent of country",
+      "chi2_statistic": 795.124,
+      "degrees_of_freedom": 5,
+      "p_value": 1.3125595014892327e-169,
+      "significant_at_0.05": true,
+      "contingency_table": {
+        "false": {
+          "EIRE": 7883,
+          "France": 8393,
+          "Germany": 9027,
+          "Netherlands": 2363,
+          "Spain": 2480,
+          "United Kingdom": 482479
+        },
+        "true": {
+          "EIRE": 301,
+          "France": 148,
+          "Germany": 453,
+          "Netherlands": 8,
+          "Spain": 48,
+          "United Kingdom": 7821
+        }
+      }
+    },
+    "correlation_quantity_unitprice": {
+      "hypothesis": "H0: no linear correlation between Quantity and UnitPrice",
+      "pearson_r": -0.0038,
+      "p_value": 0.0060574654112285995,
+      "significant_at_0.05": true
+    },
+    "confidence_interval_mean_invoice_value": {
+      "mean_invoice_value": 533.17,
+      "95pct_ci_low": 508.47,
+      "95pct_ci_high": 557.87,
+      "n_invoices": 19960
+    }
+  }
+}
